@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jokenpo</title>
+	<script type="text/javascript">
+	function gerando1(min , max){
+		var num = Math.random() * (max - min) + min;
+
+		if(num > 2){
+			alert("voce escolheu pedra e ganhou de tesoura");
+		}else if(num > 1){
+			alert("voce escolheu pedra e empatou com pedra");
+		}else{
+			alert("voce escolheu pedra e perdeu para papel");
+
+		}
+
+	}
+	function gerando2(min , max){
+		var num = Math.random() * (max - min) + min;
+
+		if(num > 2){
+			alert("voce escolheu papel e perdeu para tesoura");
+		}else if(num > 1){
+			alert("voce escolheu papel e ganhou de pedra");
+		}else{
+			alert("voce escolheu papel e empatou com papel");
+		}
+
+	}
+	function gerando3(min , max){
+		var num = Math.random() * (max - min) + min;
+
+		if(num > 2){
+			alert("voce escolheu tesoura e empatou com tesoura");
+		}else if(num > 1){
+			alert("voce escolheu tesoura e perdeu para pedra");
+		}else{
+			alert("voce escolheu tesoura e ganhou de papel");
+		}
+
+	}
+	</script>
+</head>
+<body style="background-color: #ebebeb;">
+	<h1 style="text-align: center; font-family: Arial;">Escolha sua Arma:</h1>
+	<div>
+		<img src="pedro.png" style="margin-left: 250px;" id="2" onclick="gerando1(0,3)">
+		<img src="papel.png" id="1" onclick="gerando2(0,3)">
+		<img src="tesoura.png" id ="3" onclick="gerando3(0,3)">
+	</div>
+
+</body>
+</html>
