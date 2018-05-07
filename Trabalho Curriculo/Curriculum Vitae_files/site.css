@@ -1,0 +1,65 @@
+img{
+	width: 200px;
+}
+body{
+	align-items: center;
+	background-color: #F5DEB3;
+
+
+}
+main{
+	width: 85%;
+	text-align: justify-all;
+	font-size: 100%;
+	line-height: 1.5;
+	width: 100%;
+	margin: 0;
+	font-family: "Open Sans";
+
+}
+.IC{
+	width: 40px;
+}
+h1,h2{
+	font-size: 40px;
+	margin: 0;	
+}
+
+p {
+	text-align: justify;
+	margin: 20px;
+}
+header {
+	width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 60px;
+	margin: 0;
+}
+li{
+	display: inline;
+	margin: 10px;
+
+}
+.p1{
+	float: left;
+	margin-left: 200px;
+}
+.p2{
+	float: left;
+}
+.w3-card {
+	float: right;
+	box-sizing: border-box;
+	width: 1000px;
+	}
+
+h6{
+	text-align: right;
+}
+.format {
+	margin: 20px;
+}
+h1, footer ,.fontinfo{
+	font-family: "Open Sans";
+}
