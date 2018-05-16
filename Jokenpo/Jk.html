@@ -3,18 +3,25 @@
 <head>
 	<title>Jokenpo</title>
 	<script type="text/javascript">
+		var Total = 0;
+        var gp = 0;
+        var gpa = 0;
+        var gt = 0;
 	function gerando1(min , max){
 		var num = Math.random() * (max - min) + min;
 
 		if(num > 2){
 			alert("voce escolheu pedra e ganhou de tesoura");
+            gp++;
 		}else if(num > 1){
 			alert("voce escolheu pedra e empatou com pedra");
 		}else{
 			alert("voce escolheu pedra e perdeu para papel");
 
 		}
-
+		Total++;
+        console.log(Total,gt,gp,gpa);
+        alert(gp);
 	}
 	function gerando2(min , max){
 		var num = Math.random() * (max - min) + min;
@@ -23,10 +30,14 @@
 			alert("voce escolheu papel e perdeu para tesoura");
 		}else if(num > 1){
 			alert("voce escolheu papel e ganhou de pedra");
+			gpa++;
 		}else{
 			alert("voce escolheu papel e empatou com papel");
 		}
-
+		Total++;
+        console.log(Total,gt,gp,gpa);
+        alert(gpa);
+    
 	}
 	function gerando3(min , max){
 		var num = Math.random() * (max - min) + min;
@@ -37,17 +48,25 @@
 			alert("voce escolheu tesoura e perdeu para pedra");
 		}else{
 			alert("voce escolheu tesoura e ganhou de papel");
+			gt++;
 		}
-
+		Total++;
+		console.log(Total,gt,gp,gpa);
+		alert(gt);
 	}
+	
+
+    
 	</script>
 </head>
 <body style="background-color: #ebebeb;">
-	<h1 style="text-align: center; font-family: Arial;">Escolha sua Arma:</h1>
+	<h3 style="text-align: center; font-family: Open Sans;">Tesoura > Papel <br>Papel > Pedra <br> Pedra > Tesoura<br>Escolha:</h3>
+
 	<div>
 		<img src="pedro.png" style="margin-left: 250px;" id="2" onclick="gerando1(0,3)">
 		<img src="papel.png" id="1" onclick="gerando2(0,3)">
 		<img src="tesoura.png" id ="3" onclick="gerando3(0,3)">
+		<h5 style="text-align: center; font-family: Open Sans;">--O numero que aparecerá depois é seu total de vitorias com essa escolha--</h5>
 	</div>
 
 </body>
