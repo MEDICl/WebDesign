@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		input{
+			height: 60px;
+			width: 60px;
+			text-align: center;
+			border-radius: 30px;
+			border: 5px solid black;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+        
+		var square;
+		var mark = "X";
+        var xis=0;
+        var bola=0;
+		function Jogar(square){
+			if(square.value == " ")
+			{
+
+				square.value=mark;
+
+				if(mark == "X")
+				{
+
+				 mark = "O";
+				}
+				else
+				{
+					mark ="X";
+				}
+
+            a = document.getElementById("1A").value;
+            b = document.getElementById("1B").value;
+            c = document.getElementById("1C").value;
+
+            d = document.getElementById("2A").value;
+            e = document.getElementById("2B").value;
+            f = document.getElementById("2C").value;
+
+            g = document.getElementById("3A").value;
+            h = document.getElementById("3B").value;
+            i = document.getElementById("3C").value;
+
+            if(a == "X" && b == "X" && c == "X"){
+            	$("#1A").css('background-color','green');
+            	$("#1B").css('background-color','green');
+            	$("#1C").css('background-color','green');
+            	++xis;
+            }
+            if(a == "O" && b == "O" && c == "O"){
+            	$("#1A").css('background-color','green');
+            	$("#1B").css('background-color','green');
+            	$("#1C").css('background-color','green');
+            	++bola;
+            }
+            if(d == "X" && e == "X" && f == "X"){
+            	$("#2A").css('background-color','green');
+            	$("#2B").css('background-color','green');
+            	$("#2C").css('background-color','green');
+            	++xis;
+            }
+            if(d == "O" && e == "O" && f == "O"){
+            	$("#2A").css('background-color','green');
+            	$("#2B").css('background-color','green');
+            	$("#2C").css('background-color','green');
+            	++bola;
+            }
+            if(g == "X" && h == "X" && i == "X"){
+            	$("#3A").css('background-color','green');
+            	$("#3A").css('background-color','green');
+            	$("#3A").css('background-color','green');
+            	++xis;
+            }
+            if(g == "O" && h == "O" && i == "O"){
+            	$("#3A").css('background-color','green');
+            	$("#3A").css('background-color','green');
+            	$("#3A").css('background-color','green');
+            	++bola;
+            }
+            if(a == "X" && d == "X" && g == "X"){
+            	$("#1A").css('background-color','green');
+            	$("#2A").css('background-color','green');
+            	$("#3A").css('background-color','green');
+            	++xis;
+            }
+            if(a == "O" && d == "O" && g == "O"){
+            	$("#1A").css('background-color','green');
+            	$("#2A").css('background-color','green');
+            	$("#3A").css('background-color','green');
+            	++bola;
+            }
+            if(b == "X" && e == "X" && h == "X"){
+            	$("#1B").css('background-color','green');
+            	$("#2B").css('background-color','green');
+            	$("#3B").css('background-color','green');
+            	++xis;
+            }
+            if(b == "O" && e == "O" && h == "O"){
+            	$("#1B").css('background-color','green');
+            	$("#2B").css('background-color','green');
+            	$("#3B").css('background-color','green');
+            	++bola-4;
+            }
+            if(c == "X" && f == "X" && i == "X"){
+            	$("#1C").css('background-color','green');
+            	$("#2C").css('background-color','green');
+            	$("#3C").css('background-color','green');
+            	++xis;
+            }
+            if(c == "O" && f == "O" && i == "O"){
+            	$("#1C").css('background-color','green');
+            	$("#2C").css('background-color','green');
+            	$("#3C").css('background-color','green');
+            	++bola;
+            }
+            if(a == "X" && e == "X" && i == "X"){
+            	$("#1A").css('background-color','green');
+            	$("#2B").css('background-color','green');
+            	$("#3C").css('background-color','green');
+            	++xis;
+            }
+            if(a == "O" && e == "O" && i == "O"){
+            	$("#1A").css('background-color','green');
+            	$("#2B").css('background-color','green');
+            	$("#3C").css('background-color','green');
+            	++bola;
+            }
+            if(c == "X" && e == "X" && g == "X"){
+            	$("#1C").css('background-color','green');
+            	$("#2B").css('background-color','green');
+            	$("#3A").css('background-color','green');
+            	++xis;
+            }
+            if(c == "O" && e == "O" && g == "O"){
+            	$("#1C").css('background-color','green');
+            	$("#2B").css('background-color','green');
+            	$("#3A").css('background-color','green');
+            	++bola;
+            }
+			}
+		}
+		function Refresh(){
+		console.log(bola);
+		    document.getElementById("1A").value=" ";
+            document.getElementById("1B").value=" ";
+            document.getElementById("1C").value=" ";
+
+            document.getElementById("2A").value=" ";
+            document.getElementById("2B").value=" ";
+            document.getElementById("2C").value=" ";
+
+            document.getElementById("3A").value=" ";
+            document.getElementById("3B").value=" ";
+            document.getElementById("3C").value=" ";
+            alert("Bola - "+bola);
+            alert("X - "+xis);
+                $("#1A").css('background-color','gray');
+            	$("#1B").css('background-color','gray');
+            	$("#1C").css('background-color','gray');
+            	$("#2A").css('background-color','gray');
+            	$("#2B").css('background-color','gray');
+            	$("#2C").css('background-color','gray');
+            	$("#3A").css('background-color','gray');
+            	$("#3B").css('background-color','gray');
+            	$("#3C").css('background-color','gray');
+            	
+	}
+ 	</script>
+</head>
+<body>
+<center><h1>Jogo da Velha</h1></center>
+<center>
+	<input type="button" id="1A" value=" " onclick="Jogar(this)"/>
+	<input type="button" id="1B" value=" " onclick="Jogar(this)"/>
+	<input type="button" id="1C" value=" " onclick="Jogar(this)"/>
+	<br>
+	<br>
+	<input type="button" id="2A" value=" " onclick="Jogar(this)"/>
+	<input type="button" id="2B" value=" " onclick="Jogar(this)"/>
+	<input type="button" id="2C" value=" " onclick="Jogar(this)"/>
+	<br>
+	<br>
+	<input type="button" id="3A" value=" " onclick="Jogar(this)"/>
+	<input type="button" id="3B" value=" " onclick="Jogar(this)"/>
+	<input type="button" id="3C" value=" " onclick="Jogar(this)"/>
+	<br>
+	<br>
+	<br>
+	<button onclick="Refresh()">Refresh</button>
+</center>
+</body>
+</html>
