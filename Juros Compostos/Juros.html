@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juros Compostos</title>
+	<script type="text/javascript">
+		function Calcular(){
+       event.preventDefault();
+            var pMes= {};
+            var vInicial=document.getElementById("vInicial").value;
+			var addMen=document.getElementById("addMen").value;
+			var Taxa=document.getElementById("Taxa").value;
+			var rTaxa = Taxa/100;
+			var qMeses=document.getElementById("qMeses").value;
+            var valorAc=vInicial;
+			
+            
+            for(var i=0;i<qMeses;i++){
+            	
+            	valorAc=valorAc*((1+rTaxa)+addMen);
+            	pMes[i]=valorAc;
+            }
+            
+            
+
+            valorAc=valorAc.toFixed(2);
+            document.getElementById("dvmsg").innerHTML="seu investimento:"+valorAc;           
+			
+			for(var i=0;i<qMeses;i++){
+			pMes[i]=pMes[i].toFixed(2);
+			var gg = document.createElement("div");
+			var t = document.createTextNode(1+i+" Mes - "+pMes[i]);
+			gg.appendChild(t);
+			document.body.appendChild(gg);
+			}
+			function Clear(){
+
+			}
+  
+		}
+
+
+
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<style type="text/css">
+
+	body{
+		background-color: white;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 110%;
+		font-family:"Oswald";
+	}
+		#juros{
+			font-style: '';
+			top: 100px;
+			text-align: center;
+			background-color: #99ebff;
+			padding: 20px; 
+		    position: absolute;
+		}
+		div{
+			 position: inherit;
+		}
+	</style>
+</head>
+<body>
+
+<form id="juros">
+  Valor Aplicado:<br>
+  <input type="text" class="vInicial" id="vInicial">
+  <br>
+  Aporte Mensal:<br>
+  <input type="text"  class="addMen" id="addMen">
+  <br>
+  Taxa Mensal(em %):<br>
+  <input type="text"  class="Taxa" id="Taxa">
+  <br>
+  Prazo Mensal:<br>
+  <input type="text"  class="qMeses" id="qMeses">
+  <br><br>
+  <input type="submit" class="bt1" onclick="Calcular()">
+  <button>Refresh</button>
+</form>
+<br>
+  <div id="dvmsg"></div><br>
+ 
+
+</body>
+</html>
